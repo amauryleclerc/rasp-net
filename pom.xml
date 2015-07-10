@@ -30,23 +30,30 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+			</plugin>
 		</plugins>
 
-		<extensions>
-			<extension>
-				<groupId>org.apache.maven.wagon</groupId>
-				<artifactId>wagon-ssh</artifactId>
-				<version>2.9</version>
-			</extension>
-		</extensions>
+		<!-- <extensions> -->
+		<!-- <extension> -->
+		<!-- <groupId>org.apache.maven.wagon</groupId> -->
+		<!-- <artifactId>wagon-ssh</artifactId> -->
+		<!-- <version>2.9</version> -->
+		<!-- </extension> -->
+		<!-- </extensions> -->
 	</build>
 
-	<distributionManagement>
-		<repository>
-			<id>ssh-rasp</id>
-			<url>scp://192.168.1.24/home/pi/repo</url>
-		</repository>
-	</distributionManagement>
+	<!-- <distributionManagement> -->
+	<!-- <repository> -->
+	<!-- <id>ssh-rasp</id> -->
+	<!-- <url>scp://192.168.1.24/home/pi/repo</url> -->
+	<!-- </repository> -->
+	<!-- </distributionManagement> -->
 
 </project>
