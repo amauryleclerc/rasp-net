@@ -35,12 +35,14 @@ public class NetworkStatusThread implements Runnable {
 			addresses = InetAddress.getAllByName("www.google.com");
 		
 		  for (InetAddress address : addresses) {
-		    if (address.isReachable(timeout))
+		    if (address.isReachable(timeout)){
 		       this.sendNetworkStatus("OK");
-		    else
+		    }  else{
 		       this.sendNetworkStatus("BAD");
+		    }
+		    Thread.sleep(1000);
 		  }
-		  Thread.sleep(1000);
+		
 		
 		} catch (IOException | InterruptedException e) {
 			// TODO Auto-generated catch block
