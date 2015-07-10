@@ -25,6 +25,7 @@ public class NetworkListener implements NetworkListenerInterface {
 
 	@Override
 	public void sendNetworkStatus(String status) {
+		System.out.println("status "+status);
 		if (status.equals("OK")) {
 			ledV.high();
 			ledR.low();
